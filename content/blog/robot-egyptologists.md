@@ -13,14 +13,14 @@ This post is part of an ongoing series about robots, past and present.  See [Ski
 
 Various robots have been used to explore secret tunnels in the Great Pyramid of Giza.
 
-[![](/images/blog/robot-egyptologists-001.png)](http://http://en.wikipedia.org/wiki/File:Great_Pyramid_Diagram.svg)
+[<img class="img-right" src="/images/blog/robot-egyptologists-001.png" alt="">](http://http://en.wikipedia.org/wiki/File:Great_Pyramid_Diagram.svg)
 
 The tunnels were discovered in 1872 by Waynman Dixon, a British engineer who was helping with a project to undertake accurate measurements of the pyramid.  He noticed a crack in the southern wall of the Queen's Chamber and **discovered a shaft hidden behind the masonry**, as well as a similar shaft in the northern wall.  The shafts are very narrow (20x14cm) and so there was no feasible method of exploring them until recently.  The shafts in question are **shown in red on the diagram above**.  There are two similar shafts in the King's Chamber above it, but these have exits on the outside of the pyramid.
 
 ### Enter the Robots ###
 
-![Upuaut-2 (image credit Michael Studt)](/images/blog/robot-egyptologists-003.jpg)
-![The slab at the end of the southern shaft](/images/blog/robot-egyptologists-002.gif)
+<img class="img-right" src="/images/blog/robot-egyptologists-003.jpg" alt="Upuaut-2 (image credit Michael Studt)">
+<img class="img-left" src="/images/blog/robot-egyptologists-002.gif" alt="The slab at the end of the southern shaft">
 In 1992-3, a series of robots were sent into the shafts to explore them.  The most advanced of these was **Upuhaut-2**, built by a German engineer Rudolf Gantenbrink.  It was able to **crawl up the southern shaft 63 metres** to reveal a stone slab blocking the shaft.  The slab has two copper clasps and looks like some sort of door.
 
 In 2002, another robot, the **Pyramid Rover** designed by iRobot of Boston (the people behind the Roomba vacuum cleaning robot) in collaboration with the National Geographic Society took the exploration further by drilling a hole through the slab and inserting a miniature fibre-optic camera.  They discovered a space of a few inches followed by ... **another door!**.  The same robot was also able to explore the northern shaft which twists and turns more preventing earlier robots from getting very far.  It too ends up with a door approximately 63 metres from the entrance.

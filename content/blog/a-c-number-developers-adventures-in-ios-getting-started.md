@@ -16,7 +16,7 @@ On a recent month-long trip to South America, I took part in the [Buenos Aires S
 
 First, let's look at the basic requirements for the environment.
 
-![450](/images/blog/adventures-in-ios-getting-started-001.png)
+<img class="img-right" src="/images/blog/adventures-in-ios-getting-started-001.png" alt="450">
 
 ### Xamarin MonoTouch ###
 

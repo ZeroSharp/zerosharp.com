@@ -21,7 +21,7 @@ Then create a directory for all your github projects.  You could put this anywhe
 
 ### Installing Octopress ###
 
-![](/images/blog/octopress_logo.png) 
+<img class="img-right" src="/images/blog/octopress_logo.png" alt=""> 
 
 #### Use yari instead of RVM/rbenv ####
 

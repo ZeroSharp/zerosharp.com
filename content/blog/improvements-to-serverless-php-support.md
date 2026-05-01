@@ -8,7 +8,7 @@ disqus_url        = "http://ZeroSharp.github.com/improvements-to-serverless-php-
 +++
 I was inspired by two events to jump back into serverless framework. 
 
-![200 Serverless London Meetup](/images/blog/serverless-php-improvements-001.jpeg) 
+<img class="img-left" src="/images/blog/serverless-php-improvements-001.jpeg" alt="200 Serverless London Meetup"> 
 
 Firstly, I attended the second [London serverless meetup](https://www.meetup.com/Serverless-London/) yesterday evening which was excellent and showed just how much enthusiasm there is for serverless architectures. Check out their new logo on the left. It was significant that each of the three speakers announced that they are actively hiring serverless developers.
 

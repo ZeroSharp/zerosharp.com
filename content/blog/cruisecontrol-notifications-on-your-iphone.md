@@ -7,7 +7,7 @@ description = "A review of the CCWatcher iOS app from SixAfter for monitoring yo
 disqus_identifier = "http://ZeroSharp.github.com/cruisecontrol-notifications-on-your-iphone/"
 disqus_url        = "http://ZeroSharp.github.com/cruisecontrol-notifications-on-your-iphone/"
 +++
-![200](/images/blog/ccwatcher-002.jpg)
+<img class="img-right" src="/images/blog/ccwatcher-002.jpg" alt="200">
 
 [CCWatcher](http://sixafter.com/portfolio/continuous-integration-monitoring-for-ios/) is a great iPhone app for any developer who is using CruiseControl.NET, Jenkins or Hudson for their continuous integration.
 
@@ -17,7 +17,7 @@ A full build with unit tests and functional tests takes about an hour, so often,
 
 For a long while I was looking for a better way of being informed of build failures on my phone.
 
-![300](/images/blog/ccwatcher-001.png)
+<img class="img-left" src="/images/blog/ccwatcher-001.png" alt="300">
 
 Enter **CCWatcher**. It's a simple application which allows you to enter the address of your build server and it will tell you the status of the projects you've configured.
 

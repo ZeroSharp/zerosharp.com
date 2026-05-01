@@ -9,7 +9,7 @@ disqus_url        = "http://ZeroSharp.github.com/provisioning-a-new-development-
 +++
 I've been playing around with [Boxstarter](http://boxstarter.org/) to configure my entire development environment with hardly any user intervention.
 
-![300](/images/blog/boxstarter-001.png)
+<img class="img-right" src="/images/blog/boxstarter-001.png" alt="300">
 
 Here are the steps:
 

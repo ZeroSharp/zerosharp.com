@@ -100,7 +100,11 @@ def split_img_args(args: str) -> tuple[str | None, str, str | None]:
 def replace_img(match: re.Match) -> str:
     cls, path, alt = split_img_args(match.group("args"))
     alt = alt or ""
-    # Strip leading slash for portability — Hugo serves /static/ at /
+    # Octopress `{% img right /p %}` floats the image. We need to
+    # preserve that — markdown's ![]() can't carry a class, so emit
+    # raw HTML which Markdown still accepts inside a paragraph.
+    if cls in {"left", "right", "center"}:
+        return f'<img class="img-{cls}" src="{path}" alt="{alt}">'
     return f"![{alt}]({path})"
 
 

@@ -142,7 +142,7 @@ private void FindBySubjectAction_Execute(object sender, ParametrizedActionExecut
 }       
 ```     
 
-![](/images/blog/xaf-miniprofiler-3.png)
+<img class="img-right" src="/images/blog/xaf-miniprofiler-3.png" alt="">
 
 Now navigate to the _Tasks_ list view and enter some text where it says 'Type Subject...'. You should see a new chiclet appear which contains the timing details as shown here.
 

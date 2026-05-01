@@ -199,6 +199,44 @@
   }
 }
 
+// Floated images from legacy posts (Octopress {% img right %} / left).
+.entry-content {
+  img.img-right {
+    float: right;
+    margin: 0 0 1rem 1.5rem;
+    max-width: 50%;
+    height: auto;
+  }
+  img.img-left {
+    float: left;
+    margin: 0 1.5rem 1rem 0;
+    max-width: 50%;
+    height: auto;
+  }
+  img.img-center {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  // Plain unfloated images: scale to column width.
+  img:not(.img-right):not(.img-left):not(.img-center) {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .entry-content img.img-right,
+  .entry-content img.img-left {
+    float: none;
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 100%;
+  }
+}
+
 // Pullquote — used by some legacy posts.
 aside.pullquote {
   margin: 2rem 0;
