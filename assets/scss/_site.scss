@@ -50,6 +50,30 @@
   margin: 0 auto;
 }
 
+// Landing-page hero: full-bleed yellow surface, big "0#" mark.
+body.is-landing { background: var(--zs-yellow); }
+
+.zs-hero-wrap {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.zs-hero-content {
+  text-align: center;
+
+  h1 {
+    font-family: var(--zs-font-display);
+    font-weight: var(--zs-weight);
+    font-size: clamp(6rem, 15vw, 12rem);
+    line-height: 1;
+    margin: 0 0 2rem;
+    color: var(--zs-white);
+  }
+}
+
 .zs-site-footer {
   background: var(--zs-yellow);
   color: var(--zs-white);
