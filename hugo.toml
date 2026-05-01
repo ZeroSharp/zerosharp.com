@@ -1,5 +1,5 @@
 baseURL = "https://www.zerosharp.com/"
-languageCode = "en-gb"
+locale = "en-gb"
 title = "ZeroSharp"
 copyright = "Copyright © 2012–{year} Robert Anderson"
 

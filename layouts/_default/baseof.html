@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.Lang | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="{{ site.Params.brand_yellow }}">
+
+  <title>{{ block "title" . }}{{ if not .IsHome }}{{ .Title }} — {{ end }}{{ site.Title }}{{ end }}</title>
+
+  {{ with .Description | default site.Params.description }}
+    <meta name="description" content="{{ . }}">
+  {{ end }}
+
+  <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | relURL }}">
+
+  {{ $css := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+
+  {{ if .OutputFormats.Get "RSS" }}
+    {{ with .OutputFormats.Get "RSS" }}
+      <link rel="alternate" type="application/rss+xml" href="{{ .Permalink }}" title="{{ site.Title }}">
+    {{ end }}
+  {{ end }}
+</head>
+<body>
+
+  {{ partial "site-header.html" . }}
+
+  <main class="zs-paper-wrap">
+    <div class="zs-paper">
+      {{ block "main" . }}{{ end }}
+    </div>
+  </main>
+
+  {{ partial "site-footer.html" . }}
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+// Code blocks: dark "traffic-light" frame around Solarized-Dark Pygments
+// output. Class names match Hugo Chroma's noClasses=false output, which
+// is the same scheme Pygments uses (.k, .s, .nc, .kt, etc.) — so the
+// historical Octopress posts highlight identically without re-rendering.
+
+figure.code,
+.entry-content .highlight {
+  margin: 2rem 0 2.4rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #002b36;       // base03
+  border: 1px solid #073642; // base02
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.08),
+    0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+// Dark "traffic-light" header bar.
+figure.code::before,
+.entry-content .highlight::before {
+  content: "";
+  display: block;
+  height: 36px;
+  background:
+    radial-gradient(circle at 18px 18px, #ff5f56 5px, transparent 5.5px),
+    radial-gradient(circle at 38px 18px, #ffbd2e 5px, transparent 5.5px),
+    radial-gradient(circle at 58px 18px, #27c93f 5px, transparent 5.5px),
+    linear-gradient(#0a3744, #0a3744);
+  border-bottom: 1px solid #00212b;
+}
+
+figure.code figcaption { display: none; }
+
+figure.code .highlight,
+.entry-content .highlight {
+  background: #002b36;
+  margin: 0;
+  overflow-x: auto;
+  border: none;
+}
+
+figure.code .highlight table,
+.entry-content .highlight table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0;
+}
+
+figure.code .highlight td,
+.entry-content .highlight td {
+  padding: 0;
+  vertical-align: top;
+}
+
+figure.code .highlight td.gutter,
+figure.code .highlight td.lntd:first-child,
+.entry-content .highlight td.lntd:first-child { width: 1%; white-space: nowrap; }
+
+figure.code .highlight td.code,
+.entry-content .highlight td.lntd:last-child  { width: 100%; }
+
+figure.code .highlight pre,
+.entry-content .highlight pre {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  font-family: var(--zs-font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #93a1a1;
+}
+
+figure.code .highlight pre.line-numbers,
+.entry-content .highlight pre.lntable .lnt,
+.entry-content .highlight .lntd:first-child pre {
+  text-align: right;
+  user-select: none;
+  background: #073642 !important;
+  border-right: 1px solid #002b36 !important;
+  color: #586e75 !important;
+  padding: 1rem 0.85rem !important;
+}
+
+figure.code .highlight .line-number,
+figure.code .highlight .line-numbers span { color: #586e75 !important; }
+
+figure.code .highlight .line { display: block; }
+
+// Solarized-Dark Pygments token colours.
+.highlight {
+  .c, .cm, .cp, .c1 { color: #586e75; font-style: italic; }
+  .cs               { color: #586e75; font-weight: bold; font-style: italic; }
+
+  .err { color: #dc322f; }
+
+  .k  { color: #cb4b16; }
+  .kc { color: #859900; font-weight: bold; }
+  .kd { color: #268bd2; }
+  .kp { color: #cb4b16; font-weight: bold; }
+  .kr { color: #d33682; font-weight: bold; }
+  .kt { color: #2aa198; }
+
+  .o  { color: #93a1a1; font-weight: bold; }
+  .p  { color: #93a1a1; }
+  .ow { color: #2aa198; font-weight: bold; }
+
+  .gd { color: #93a1a1; background-color: #4a1414; }
+  .ge { color: #93a1a1; font-style: italic; }
+  .gh { color: #586e75; }
+  .gi { color: #93a1a1; background-color: #1a3a14; }
+  .gs { color: #93a1a1; font-weight: bold; }
+  .gu { color: #6c71c4; }
+
+  .n  { color: #268bd2; }
+  .na { color: #268bd2; }
+  .nb { color: #859900; }
+  .nc { color: #d33682; }
+  .no { color: #b58900; }
+  .nl { color: #859900; }
+  .ne { color: #268bd2; font-weight: bold; }
+  .nf { color: #268bd2; font-weight: bold; }
+  .nn { color: #b58900; }
+  .nt { color: #268bd2; font-weight: bold; }
+  .nx { color: #b58900; }
+  .nv, .vg, .vi { color: #268bd2; }
+
+  .mf, .m, .mh, .mi { color: #2aa198; }
+
+  .s, .sd, .s2, .sr, .s1 { color: #2aa198; }
+  .se { color: #dc322f; }
+  .si { color: #268bd2; }
+}
+
+figure.code .highlight::-webkit-scrollbar,
+.entry-content .highlight::-webkit-scrollbar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+figure.code .highlight::-webkit-scrollbar-thumb,
+.entry-content .highlight::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 4px;
+}

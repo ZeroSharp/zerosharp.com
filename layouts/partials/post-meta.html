@@ -1,0 +1,17 @@
+{{/*
+  Post meta line: date · author · category chips.
+  Mirrors the mockup's `.post-meta` markup.
+*/}}
+<p class="post-meta">
+  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+  <span class="meta-sep" aria-hidden="true"></span>
+  <span>by <a href="{{ "/cv/" | relURL }}">{{ site.Params.author }}</a></span>
+  {{ with .Params.categories }}
+    <span class="meta-sep" aria-hidden="true"></span>
+    <span class="post-categories">
+      {{ range . }}
+        <a class="cat-chip" href="{{ printf "/blog/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a>
+      {{ end }}
+    </span>
+  {{ end }}
+</p>

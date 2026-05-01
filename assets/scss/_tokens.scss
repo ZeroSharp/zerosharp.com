@@ -1,0 +1,95 @@
+// Design tokens — lifted verbatim from the Claude Design mockup
+// (assets/colors_and_type.css). Single source of truth for colour,
+// type, spacing, radius, motion. Use the CSS variables — not the
+// SCSS layer — so user-agent dev tools show meaningful names.
+
+@font-face {
+  font-family: "VAG Rounded Std";
+  src: url("/fonts/VAG Rounded Std Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VAG Rounded Std";
+  src: url("/fonts/VAG Rounded Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VAG Rounded Std";
+  src: url("/fonts/VAG Rounded Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  // Brand palette
+  --zs-yellow:       #ffbf00;
+  --zs-yellow-deep:  #e6ac00;
+  --zs-navy:         #023047;
+  --zs-teal:         #219EBC;
+  --zs-orange:       #FB8500;
+  --zs-white:        #ffffff;
+  --zs-red:          #aa0000;
+  --zs-wine:         #350608;
+  --zs-purple:        var(--zs-navy);
+  --zs-purple-bright: var(--zs-teal);
+
+  // Ink (text) ramp
+  --zs-ink:          #333333;
+  --zs-ink-muted:    #555555;
+  --zs-ink-dim:      #666666;
+  --zs-rule:         #eeeeee;
+  --zs-chip-bg:      #f5f5f5;
+
+  // Semantic surfaces
+  --zs-bg:            var(--zs-yellow);
+  --zs-bg-paper:      #ffffff;
+  --zs-fg-on-yellow:  #ffffff;
+  --zs-fg-link:       var(--zs-purple);
+  --zs-fg-link-hover: var(--zs-purple-bright);
+  --zs-fg-body:       var(--zs-ink);
+  --zs-fg-muted:      var(--zs-ink-muted);
+
+  // Type
+  --zs-font-display: "VAG Rounded Std", Arial Rounded MT Bold, Arial, sans-serif;
+  --zs-font-body:    "VAG Rounded Std", Arial, sans-serif;
+  --zs-font-mono:    ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --zs-weight:       700;
+
+  --zs-fs-hero:  clamp(6rem, 15vw, 12rem);
+  --zs-fs-h1:    2.5rem;
+  --zs-fs-h2:    1.75rem;
+  --zs-fs-h3:    1.25rem;
+  --zs-fs-logo:  2rem;
+  --zs-fs-body:  1rem;
+  --zs-fs-meta:  0.9rem;
+  --zs-fs-small: 0.875rem;
+
+  --zs-lh-tight: 1;
+  --zs-lh-snug:  1.2;
+  --zs-lh-body:  1.6;
+
+  // Spacing scale (rems)
+  --zs-s-1:  0.25rem;
+  --zs-s-2:  0.5rem;
+  --zs-s-3:  0.75rem;
+  --zs-s-4:  1rem;
+  --zs-s-5:  1.5rem;
+  --zs-s-6:  2rem;
+  --zs-s-7:  2.5rem;
+  --zs-s-8:  3rem;
+  --zs-s-10: 4rem;
+
+  --zs-radius-chip: 4px;
+  --zs-radius-pill: 999px;
+  --zs-radius-card: 8px;
+  --zs-shadow-soft: 0 1px 2px rgba(0,0,0,.08), 0 4px 12px rgba(0,0,0,.06);
+  --zs-ease:        ease;
+  --zs-dur-hover:   0.3s;
+}

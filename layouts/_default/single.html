@@ -1,0 +1,25 @@
+{{ define "main" }}
+<article class="hentry">
+
+  <header>
+    <p class="post-eyebrow">{{ .Section | humanize | default "Page" }}</p>
+    <h1 class="post-title">{{ .Title }}</h1>
+    {{ if not (eq .Section "") }}
+      {{ partial "post-meta.html" . }}
+    {{ end }}
+  </header>
+
+  <div class="entry-content">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    {{ partial "post-byline.html" . }}
+    {{ partial "post-nav.html" . }}
+    {{ if eq .Section "blog" }}
+      {{ partial "comments-disqus.html" . }}
+    {{ end }}
+  </footer>
+
+</article>
+{{ end }}

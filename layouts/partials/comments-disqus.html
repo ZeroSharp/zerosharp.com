@@ -1,0 +1,33 @@
+{{/*
+  Disqus thread. We pass disqus_identifier explicitly so threads from
+  the original Octopress permalinks stay attached after the migration.
+  Posts can override disqus_identifier in their front-matter.
+*/}}
+{{ $shortname := site.Params.disqus.shortname }}
+{{ $identifier := .Params.disqus_identifier | default .RelPermalink }}
+{{ $url        := .Params.disqus_url        | default .Permalink }}
+{{ $title      := .Title }}
+
+{{ if $shortname }}
+<section class="comments-section">
+  <h2>Comments</h2>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.identifier = {{ $identifier | jsonify }};
+      this.page.url        = {{ $url        | jsonify }};
+      this.page.title      = {{ $title      | jsonify }};
+    };
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://{{ $shortname }}.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>
+    Please enable JavaScript to view the
+    <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+</section>
+{{ end }}

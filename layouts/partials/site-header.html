@@ -1,0 +1,12 @@
+<header class="zs-site-header">
+  <a class="zs-wordmark" href="{{ "/" | relURL }}">{{ site.Title }}</a>
+  <nav>
+    <ul class="zs-nav">
+      <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="is-active"{{ end }}>Home</a></li>
+      <li><a href="{{ "/cv/" | relURL }}"{{ if eq .Section "cv" }} class="is-active"{{ end }}>About</a></li>
+      <li><a href="{{ "/blog/" | relURL }}"{{ if or (eq .Section "blog") (eq .Type "blog") }} class="is-active"{{ end }}>Blog</a></li>
+      <li><a href="https://github.com/zerosharp">GitHub</a></li>
+      <li><a href="mailto:info@zerosharp.com">Contact</a></li>
+    </ul>
+  </nav>
+</header>

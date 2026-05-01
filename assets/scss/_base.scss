@@ -1,0 +1,78 @@
+*, ::before, ::after { box-sizing: border-box; }
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  font-family: var(--zs-font-body);
+  font-weight: var(--zs-weight);
+  background: var(--zs-yellow);
+  color: var(--zs-fg-body);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Generic display helpers — used inline by content / layouts when needed.
+.zs-h1 {
+  font-family: var(--zs-font-display);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-h1);
+  line-height: var(--zs-lh-snug);
+  color: var(--zs-fg-body);
+}
+
+.zs-h2 {
+  font-family: var(--zs-font-display);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-h2);
+  line-height: var(--zs-lh-snug);
+  color: var(--zs-fg-body);
+  padding-bottom: var(--zs-s-2);
+  border-bottom: 1px solid var(--zs-rule);
+}
+
+.zs-h3 {
+  font-family: var(--zs-font-display);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-h3);
+  color: var(--zs-fg-body);
+}
+
+.zs-hero {
+  font-family: var(--zs-font-display);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-hero);
+  line-height: var(--zs-lh-tight);
+  color: var(--zs-fg-on-yellow);
+}
+
+.zs-body {
+  font-family: var(--zs-font-body);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-body);
+  line-height: var(--zs-lh-body);
+  color: var(--zs-fg-body);
+}
+
+.zs-meta {
+  font-family: var(--zs-font-body);
+  font-weight: var(--zs-weight);
+  font-size: var(--zs-fs-meta);
+  color: var(--zs-fg-muted);
+}
+
+.zs-link {
+  color: var(--zs-fg-link);
+  text-decoration: none;
+  transition: color var(--zs-dur-hover) var(--zs-ease);
+  &:hover { color: var(--zs-fg-link-hover); }
+}
+
+.zs-chip {
+  font-family: var(--zs-font-body);
+  font-weight: var(--zs-weight);
+  padding: var(--zs-s-2) var(--zs-s-4);
+  background: var(--zs-chip-bg);
+  color: var(--zs-ink-muted);
+  border-radius: var(--zs-radius-chip);
+}
