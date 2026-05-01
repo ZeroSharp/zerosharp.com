@@ -144,6 +144,7 @@ private void FindBySubjectAction_Execute(object sender, ParametrizedActionExecut
 
 <img class="img-right" src="/images/blog/xaf-miniprofiler-3.png" alt="">
 
+
 Now navigate to the _Tasks_ list view and enter some text where it says 'Type Subject...'. You should see a new chiclet appear which contains the timing details as shown here.
 
 MiniProfiler is a great tool for providing helpful profiling benchmarks, even in production. It's often difficult to measure when a remote user complains to support that the site seems slow. How slow is slow? In a production environment, you can turn on MiniProfiler for the user (by setting a cookie for instance) and then ask them to share their profiling information for some basic operations. This information can be invaluable in determining where the fault lies.

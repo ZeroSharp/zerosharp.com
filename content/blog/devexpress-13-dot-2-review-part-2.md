@@ -80,7 +80,9 @@ In the 13.2 release, there is now support for runtime extension of the model. De
 
 ## One warning ##
 <img class="img-left" src="/images/blog/devexpress-13-2-review-001.png" alt="">
+
 <img class="img-right" src="/images/blog/devexpress-13-2-review-002.png" alt="">
+
 The default directories for the installation have changed again. I'm sure DevExpress has some good reason for this, but if, like me, you have several different versions installed you end up with a confusing directory tree. Whenever this happens I always end up having to modify build scripts and config files so that all my tools work as expected. For those of you who use Red Gate's _.NET Reflector_, you can find my config file [in this gist](https://gist.github.com/shamp00/7748150).
 
 ## Conclusions ##

@@ -7,7 +7,8 @@ description = "A short hisotry of the Soviet PrOP-M Rovers."
 disqus_identifier = "http://ZeroSharp.github.com/skiing-on-mars/"
 disqus_url        = "http://ZeroSharp.github.com/skiing-on-mars/"
 +++
-[<img class="img-right" src="/images/blog/skiing-on-mars-003.jpg" alt="">](http://en.wikipedia.org/wiki/File:Mars_propm_rover.jpg)
+[<img class="img-right" src="/images/blog/skiing-on-mars-003.jpg" alt="">
+](http://en.wikipedia.org/wiki/File:Mars_propm_rover.jpg)
 This post is part of an ongoing series about robots, past and present.  See [Friends, Robots, Countrymen](/friends-robots-countrymen/).
 
 ### The Soviet PrOP-M Rovers ###
@@ -16,8 +17,10 @@ In May 1971, the USSR launched two rovers to explore Mars.  **They were to move 
 
 The first one crash landed.  The second landed sucessfully but failed twenty seconds after landing and never moved.  The reasons are unknown although the landing took place in the middle of a dust storm.  The base module did manage to transmit about 20 seconds worth of the **first ever photograph of the surface of Mars**, shown on the left here.  According to the Soviet Academy of Sciences there is nothing, horizon or otherwise, identifiable in this photograph.
 
-[<img class="img-left" src="/images/blog/skiing-on-mars-001.png" alt="">](http://en.wikipedia.org/wiki/File:Mars_3_Image.png)
-[<img class="img-right" src="/images/blog/skiing-on-mars-002.jpg" alt="">](http://en.wikipedia.org/wiki/File:Soviet_Union-1972-Stamp-0.06._Mars_2.jpg)
+[<img class="img-left" src="/images/blog/skiing-on-mars-001.png" alt="">
+](http://en.wikipedia.org/wiki/File:Mars_3_Image.png)
+[<img class="img-right" src="/images/blog/skiing-on-mars-002.jpg" alt="">
+](http://en.wikipedia.org/wiki/File:Soviet_Union-1972-Stamp-0.06._Mars_2.jpg)
 
 The rover itself, although never deployed, was equipped with sensors to detect obstacles (the two foremost metal bars in the photograph above).  **The rovers were somewhat autonomous** and capable of navigating obstacles.  The Soviet engineers were aware they might not have enough time for a remote-controlled operation of the rover (one-way communication takes between 4 and 20 minutes to Mars).
 

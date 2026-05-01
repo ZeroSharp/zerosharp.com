@@ -64,6 +64,7 @@ The overall score drops to 62.
 
 <img class="img-right" src="/images/blog/google-page-speed-004.png" alt="">
 
+
 You can alternatively use IIS's dynamic compression by setting `enableResourceMerging="true"` and the others false and adding a `urlCompression` setting as follows.
 
     <system.webServer>

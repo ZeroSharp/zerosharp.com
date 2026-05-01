@@ -103,8 +103,11 @@ def replace_img(match: re.Match) -> str:
     # Octopress `{% img right /p %}` floats the image. We need to
     # preserve that — markdown's ![]() can't carry a class, so emit
     # raw HTML which Markdown still accepts inside a paragraph.
+    # The trailing blank line is critical for Goldmark: an <img> at
+    # the start of a line is treated as a raw HTML block and would
+    # swallow the following paragraph's markdown without a separator.
     if cls in {"left", "right", "center"}:
-        return f'<img class="img-{cls}" src="{path}" alt="{alt}">'
+        return f'<img class="img-{cls}" src="{path}" alt="{alt}">\n'
     return f"![{alt}]({path})"
 
 

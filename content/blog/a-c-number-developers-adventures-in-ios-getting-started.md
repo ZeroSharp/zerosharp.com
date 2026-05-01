@@ -18,6 +18,7 @@ First, let's look at the basic requirements for the environment.
 
 <img class="img-right" src="/images/blog/adventures-in-ios-getting-started-001.png" alt="450">
 
+
 ### Xamarin MonoTouch ###
 
 [MonoTouch](http://xamarin.com/monotouch) is the easiest approach for C# developers. It allowed me to write a basic native iPhone app in a weekend with no prior mobile development experience. I'd never used MonoDevelop or XCode either.

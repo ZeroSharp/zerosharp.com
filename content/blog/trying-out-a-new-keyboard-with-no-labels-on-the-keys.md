@@ -7,7 +7,8 @@ description = "First impressions using Das Keyboard Model S Ultimate."
 disqus_identifier = "http://ZeroSharp.github.com/trying-out-a-new-keyboard-with-no-labels-on-the-keys/"
 disqus_url        = "http://ZeroSharp.github.com/trying-out-a-new-keyboard-with-no-labels-on-the-keys/"
 +++
- [<img class="img-right" src="/images/blog/trying-out-a-new-keyboard-001.jpg" alt="Das Keyboard Model S Ultimate">](http://www.daskeyboard.com/model-s-ultimate/)
+ [<img class="img-right" src="/images/blog/trying-out-a-new-keyboard-001.jpg" alt="Das Keyboard Model S Ultimate">
+](http://www.daskeyboard.com/model-s-ultimate/)
 
  My new ~~keyboarf~~ keyboard [has no labels on the keys](http://www.daskeyboard.com/model-s-ultimate/)!
 

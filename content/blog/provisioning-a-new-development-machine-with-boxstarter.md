@@ -11,6 +11,7 @@ I've been playing around with [Boxstarter](http://boxstarter.org/) to configure 
 
 <img class="img-right" src="/images/blog/boxstarter-001.png" alt="300">
 
+
 Here are the steps:
 
 1. Install Windows 8.1 on a new machine.

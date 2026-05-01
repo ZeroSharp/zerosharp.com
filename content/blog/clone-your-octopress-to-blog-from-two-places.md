@@ -9,6 +9,7 @@ disqus_url        = "http://ZeroSharp.github.com/clone-your-octopress-to-blog-fr
 +++
 <img class="img-right" src="/images/blog/clone-your-octopress-001.png" alt="">
 
+
 This post covers how recreate a local repository of your Octopress blog. Perhaps you've accidentally lost it, or perhaps you would like to be able to blog from two different places. Recently [I bought a new computer](/the-best-pc-laptop-is-a-mac/) and I wanted to be able to blog from both my desktop and my laptop.
 
 ### How Octopress works ###

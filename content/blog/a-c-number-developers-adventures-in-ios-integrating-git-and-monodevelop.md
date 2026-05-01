@@ -87,6 +87,7 @@ When you click Ok, you will be prompted for your BitBucket credentials.
 
 <img class="img-right" src="/images/blog/adventures-in-ios-bitbucket-004.png" alt="379 92">
 
+
 That's it. Now Git is integrated into your MonoDevelop environment. For instance, you can right-click in the editor to view the diff or the log of the current file, push changes, commit messages locally, etc.
 
 Note that instead of BitBucket, it would have been just as straightforward to host the repository on GitHub instead.

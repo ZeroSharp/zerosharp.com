@@ -32,7 +32,8 @@ The computer on board is a [RAD6000](http://en.wikipedia.org/wiki/IBM_RAD6000). 
 
 #### Lifecycle ####
 
-[<img class="img-right" src="/images/blog/the-only-other-robot-002.jpg" alt="Eagle Crater landing site">](http://en.wikipedia.org/wiki/File:Opportunity_-_Cratera_Eagle.jpg)
+[<img class="img-right" src="/images/blog/the-only-other-robot-002.jpg" alt="Eagle Crater landing site">
+](http://en.wikipedia.org/wiki/File:Opportunity_-_Cratera_Eagle.jpg)
 
 The software on a Mars lander is expected take 3-4 years development.
 It's designed according to a [Waterfall](http://en.wikipedia.org/wiki/Waterfall_model) model split roughly as follows: 
