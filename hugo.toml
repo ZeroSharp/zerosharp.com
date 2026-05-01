@@ -1,0 +1,42 @@
+baseURL = "https://www.zerosharp.com/"
+languageCode = "en-gb"
+title = "ZeroSharp"
+copyright = "Copyright © 2012–{year} Robert Anderson"
+
+# Pretty URLs: /<slug>/ instead of /<slug>.html — matches existing
+# Octopress permalink scheme so blog.zerosharp.com URLs are preserved.
+[permalinks]
+  blog = "/:slug/"
+
+# The blog posts at the root of /blog/ keep the bare slug, e.g.
+# blog.zerosharp.com/fast-batch-deletions-with-devexpress-xpo/
+# (Hugo strips date prefix from filenames via :slug honouring the
+# 'slug' front-matter field.)
+
+[params]
+  description = "Robert Anderson on programming, C#, .NET, DevExpress, and technology in general"
+  author      = "Robert Anderson"
+  brand_yellow = "#ffbf00"
+  brand_purple = "#3D0F4D"
+  brand_lavender = "#B45AD3"
+
+[params.disqus]
+  shortname = "zerosharp"
+
+[markup]
+  [markup.highlight]
+    noClasses = false           # emit class="k", "s", etc — we own the SCSS
+    lineNos = true
+    lineNumbersInTable = true
+    style = "solarized-dark"    # ignored when noClasses=false; classes drive theme
+  [markup.goldmark.renderer]
+    unsafe = true               # allow inline HTML in posts (legacy posts use it)
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+# Section-level config: blog feed at /blog/index.xml, etc.
+[taxonomies]
+  tag = "tags"
+  category = "categories"
