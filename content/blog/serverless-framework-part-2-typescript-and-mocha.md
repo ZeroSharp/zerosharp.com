@@ -28,7 +28,7 @@ It's a tiny, simple, rarely-used web service but AWS lambda is still a great fit
 ## Mocha and TypeScript ##
 
 ## New version 0.3.1 ##
-{% highlight Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version. Also, [TSD has been deprecated](https://github.com/DefinitelyTyped/tsd/issues/269) in favour of [Typings](https://www.npmjs.com/package/typings) so I've updated to use Typings instead. %}
+{{< highlight >}}Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version. Also, [TSD has been deprecated](https://github.com/DefinitelyTyped/tsd/issues/269) in favour of [Typings](https://www.npmjs.com/package/typings) so I've updated to use Typings instead.{{< /highlight >}}
 
 Let's do things properly and set up a testing framework.
 

@@ -10,7 +10,7 @@ disqus_url        = "http://ZeroSharp.github.com/serverless-framework-part-4-con
 This is part of an ongoing series about the [Serverless framework](https://github.com/serverless/serverless): [Part 1](/serverless-framework-part-1-up-and-running/), [part 2](/serverless-framework-part-2-typescript-and-mocha/), [part 3](/serverless-framework-part-3-the-guts/). 
 
 ## New version 0.3.1 ##
-{% highlight Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version. Also, [TSD has been deprecated](https://github.com/DefinitelyTyped/tsd/issues/269) in favour of [Typings](https://www.npmjs.com/package/typings) so I've updated to use Typings instead. %}
+{{< highlight >}}Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version. Also, [TSD has been deprecated](https://github.com/DefinitelyTyped/tsd/issues/269) in favour of [Typings](https://www.npmjs.com/package/typings) so I've updated to use Typings instead.{{< /highlight >}}
 All parts have been updated for the latest version of the framework 0.3.1.
 
 ## The Password of the Day Generator class ##

@@ -237,16 +237,49 @@
   }
 }
 
-// Pullquote — used by some legacy posts.
-aside.pullquote {
-  margin: 2rem 0;
-  padding: 1rem 1.5rem;
-  border-left: 4px solid var(--zs-yellow);
-  font-family: var(--zs-font-display);
-  font-weight: 700;
-  font-size: 1.25rem;
-  line-height: 1.4;
-  color: var(--zs-purple);
+// `highlight` Octopress shortcode — inline fluorescent emphasis.
+.entry-content span.fluo {
+  background-color: #FEDB7C;
+  padding: 0.1em 0.25em;
+  border-radius: 2px;
+}
+
+// Indented (4-space) code blocks. Goldmark emits a plain
+// <pre><code> for these — no .highlight wrapper — so the dark
+// frame rules in _syntax.scss don't match. Style them here as a
+// monospace block with the same dark Solarized fill, minus the
+// traffic-light header (visually quieter for shell-snippet usage).
+.entry-content pre {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #002b36;
+  color: #93a1a1;
+  border: 1px solid #073642;
+  border-radius: 8px;
+  font-family: var(--zs-font-mono);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.entry-content pre code {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+// Suppress the above for code already inside a Chroma-highlighted
+// figure or .highlight wrapper — those have their own framing.
+figure.code .entry-content pre,
+figure.code pre,
+.entry-content .highlight pre {
+  margin: 0;
+  border: none;
+  border-radius: 0;
 }
 
 .comments-placeholder {

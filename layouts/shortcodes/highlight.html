@@ -1,0 +1,7 @@
+{{/* {{< highlight >}}TEXT{{< /highlight >}}
+     Octopress's plugins/highlight.rb shortcode rendered TEXT as
+     inline highlighted text in a fluorescent yellow span.
+     Hugo also has a built-in `highlight` shortcode for syntax
+     highlighting code, but legacy posts use this name for the
+     fluo-span behaviour, so this override wins. */}}
+<span class="fluo">{{ .Inner | markdownify }}</span>

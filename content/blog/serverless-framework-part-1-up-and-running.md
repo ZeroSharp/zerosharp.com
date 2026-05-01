@@ -8,7 +8,7 @@ disqus_identifier = "http://ZeroSharp.github.com/serverless-framework-part-1-up-
 disqus_url        = "http://ZeroSharp.github.com/serverless-framework-part-1-up-and-running/"
 +++
 ## New version 0.3.1 ##
-{% highlight Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version. %}
+{{< highlight >}}Edit: since the original version of this post, a new version 0.3.1 of Serverless was released. I have updated the tutorial below to reflect the newer version.{{< /highlight >}}
 
 I was in the middle of a blog post about the JAWS framework and before I had finished it changed its name to [the Serverless framework](https://github.com/serverless/serverless). It is a very clever way to build apps without worrying about provisioning server or whether it will scale. This is because it uses Amazon Web Services and in particular the Amazon lambda compute service. It's currently in beta.
 

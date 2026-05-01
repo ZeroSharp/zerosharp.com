@@ -1,5 +1,10 @@
-{{/* {{< pullquote >}}TEXT{{< /pullquote >}}
-     A simple offset pullquote — picks up `.pullquote` style. */}}
-<aside class="pullquote">
-  {{ .Inner | markdownify }}
-</aside>
+{{/* {{< pullquote >}}BODY{{< /pullquote >}}
+     Octopress's pullquote shortcode rendered the body inline as
+     normal paragraphs while pulling out any {"..."}-bracketed phrase
+     into a sidebar callout. We don't replicate the sidebar (the
+     mockup design column is too narrow); we just render the body
+     as ordinary paragraphs and strip the {"..."} braces from any
+     inline pull phrases so they read naturally. */}}
+{{ $body := .Inner }}
+{{ $body = replaceRE `\{\"([^\"}]+)\"\}` "$1" $body }}
+{{ $body | markdownify }}

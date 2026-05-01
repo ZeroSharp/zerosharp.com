@@ -62,6 +62,12 @@ YOUTUBE_RE = re.compile(r"\{%\s*youtube\s+(?P<id>\S+)\s*%\}")
 # {% gist USERNAME/ID %} or {% gist ID %}
 GIST_RE = re.compile(r"\{%\s*gist\s+(?P<args>\S+(?:\s+\S+)?)\s*%\}")
 
+# {% highlight TEXT %} — Octopress plugin (plugins/highlight.rb).
+# Renders TEXT as inline highlighted text (span.fluo). The TEXT
+# itself can contain Markdown, so we keep it as Markdown and wrap
+# in a span via raw HTML.
+HIGHLIGHT_RE = re.compile(r"\{%\s*highlight\s+(?P<text>[^%]+?)\s*%\}", re.DOTALL)
+
 
 def split_img_args(args: str) -> tuple[str | None, str, str | None]:
     """Split `[class] /path [alt]` into (class, path, alt).
@@ -183,6 +189,17 @@ def replace_raw(match: re.Match) -> str:
     return match.group("body")
 
 
+def replace_highlight(match: re.Match) -> str:
+    """Octopress {% highlight TEXT %} -> Hugo highlight shortcode.
+
+    Inner text may contain Markdown (e.g. links). We delegate to a
+    custom Hugo shortcode (layouts/shortcodes/highlight.html) which
+    renders `.fluo` and runs the inner content through markdownify.
+    """
+    text = match.group("text").strip()
+    return f'{{{{< highlight >}}}}{text}{{{{< /highlight >}}}}'
+
+
 def transform_body(body: str) -> str:
     # Order matters: codeblock first so we don't process its inner content,
     # then raw (which is inside other markup), then the rest.
@@ -190,6 +207,7 @@ def transform_body(body: str) -> str:
     body = BLOCKQUOTE_RE.sub(replace_blockquote, body)
     body = PULLQUOTE_RE.sub(replace_pullquote, body)
     body = RAW_RE.sub(replace_raw, body)
+    body = HIGHLIGHT_RE.sub(replace_highlight, body)
     body = YOUTUBE_RE.sub(replace_youtube, body)
     body = GIST_RE.sub(replace_gist, body)
     body = IMGCAP_RE.sub(replace_imgcap, body)
