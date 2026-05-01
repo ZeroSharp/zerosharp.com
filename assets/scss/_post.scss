@@ -199,6 +199,18 @@
   }
 }
 
+// Pullquote — used by some legacy posts.
+aside.pullquote {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--zs-yellow);
+  font-family: var(--zs-font-display);
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.4;
+  color: var(--zs-purple);
+}
+
 .comments-placeholder {
   padding: 1.5rem;
   background: var(--zs-chip-bg);
