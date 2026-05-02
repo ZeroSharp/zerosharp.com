@@ -1,29 +1,11 @@
 {{ define "main" }}
-{{ if eq .Kind "taxonomy" }}
-  {{- /* All-categories or all-tags index page */ -}}
-  <header>
-    <p class="post-eyebrow">Blog</p>
-    <h1 class="post-title">All {{ .Title | lower }}</h1>
-  </header>
-  <div class="entry-content">
-    {{ .Content }}
-    <ul class="taxonomy-index">
-      {{ range .Pages.ByTitle }}
-        <li>
-          <a class="cat-chip" href="{{ .RelPermalink }}">{{ .Title }}</a>
-          <span class="zs-meta taxonomy-count">{{ len .Pages }}</span>
-        </li>
-      {{ end }}
-    </ul>
-  </div>
-
-{{ else if eq .Kind "term" }}
+{{ if eq .Kind "term" }}
   {{- /* A specific term page (e.g. /blog/categories/mathematics/) */ -}}
   <header>
     <p class="post-eyebrow">{{ .Type | humanize }}</p>
     <h1 class="post-title">{{ .Title }}</h1>
     <p class="taxonomy-back">
-      <a href="{{ printf "/blog/%s/" .Type | relURL }}" class="zs-link">← All {{ .Type }}</a>
+      <a href="{{ "/blog/" | relURL }}" class="zs-link">← All posts</a>
     </p>
   </header>
   <div class="entry-content">

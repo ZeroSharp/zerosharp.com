@@ -237,28 +237,7 @@
   }
 }
 
-// Taxonomy index (e.g. /blog/categories/) — chip grid + count.
-.entry-content ul.taxonomy-index {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-
-  li {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-  }
-
-  .taxonomy-count {
-    font-size: 0.8rem;
-    color: var(--zs-ink-dim);
-  }
-}
-
-// "← All categories" backlink under term-page title.
+// "← All posts" backlink under a category-page title.
 p.taxonomy-back {
   margin: 0.5rem 0 0;
   font-size: 0.9rem;
