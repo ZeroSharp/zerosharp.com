@@ -7,6 +7,11 @@ copyright = "Copyright © 2012–{year} Robert Anderson"
 # Octopress permalink scheme so blog.zerosharp.com URLs are preserved.
 [permalinks]
   blog = "/:slug/"
+  # Taxonomy pages: keep the Octopress URL pattern
+  # /blog/categories/<slug>/ and /blog/tags/<slug>/ so existing
+  # links from old posts and external sources keep working.
+  categories = "/blog/categories/:slug/"
+  tags       = "/blog/tags/:slug/"
 
 # The blog posts at the root of /blog/ keep the bare slug, e.g.
 # blog.zerosharp.com/fast-batch-deletions-with-devexpress-xpo/
