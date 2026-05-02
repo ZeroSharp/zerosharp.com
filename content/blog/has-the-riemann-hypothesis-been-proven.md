@@ -1,12 +1,12 @@
 +++
-title = "Has the Riemann Hypothesis been proved?"
+title = "Has the Riemann Hypothesis been proven?"
 date = 2018-09-23T08:35:00+01:00
-slug = "has-the-riemann-hypothesis-been-proved"
+slug = "has-the-riemann-hypothesis-been-proven"
 categories = ["mathematics"]
 disqus_identifier = "http://ZeroSharp.github.com/has-the-riemann-hypothesis-been-proved/"
 disqus_url        = "http://ZeroSharp.github.com/has-the-riemann-hypothesis-been-proved/"
 +++
-<img class="img-right" src="/images/blog/has-the-riemann-hypothesis-been-proved-michael-atiyah.jpg" alt="By Tugsataydin CC BY-SA 4.0 from Wikimedia Commons">
+<img class="img-right" src="/images/blog/has-the-riemann-hypothesis-been-proven-michael-atiyah.jpg" alt="By Tugsataydin CC BY-SA 4.0 from Wikimedia Commons">
 
 Tomorrow could be an exciting moment in the history of maths. [Sir Michael Atiyah](https://en.wikipedia.org/wiki/Michael_Atiyah) is presenting a proof of the Riemann Hypothesis at the Heidelberg Laureate Forum which will be available on [their youtube channel](https://www.youtube.com/user/LaureateForum). There is a good angle by Ken Regan on the [Gödel's Lost Letter blog](https://rjlipton.wordpress.com/2018/09/21/the-specter-of-simpler-proofs/).
 

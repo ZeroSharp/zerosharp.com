@@ -33,7 +33,7 @@ Walked through with Playwright MCP at desktop and mobile widths:
 - Landing page (`/`): full-bleed yellow with "0#" hero, header nav, footer.
 - Blog index (`/blog/`): "ZeroSharp" title + description blurb + paginated post list with category chips.
 - About (`/about/`): bio paragraphs with right-floated photo of Robert.
-- Sample posts: *Fast Batch Deletions With DevExpress XPO* (the post the mockup was designed against — matches almost pixel-for-pixel), *Skiing on Mars* (image-heavy with multi-image floats), *Two Fields Medallists* (blockquote with attribution), *Has the Riemann Hypothesis Been Proved?* (floated image followed by markdown links — caught the Goldmark issue), *Serverless Framework Part 2* (pullquote, highlight callout, indented code blocks — caught three issues).
+- Sample posts: *Fast Batch Deletions With DevExpress XPO* (the post the mockup was designed against — matches almost pixel-for-pixel), *Skiing on Mars* (image-heavy with multi-image floats), *Two Fields Medallists* (blockquote with attribution), *Has the Riemann Hypothesis Been Proven?* (floated image followed by markdown links — caught the Goldmark issue), *Serverless Framework Part 2* (pullquote, highlight callout, indented code blocks — caught three issues).
 - Mobile breakpoint (390 × 844): header stacks, code blocks scroll horizontally inside the dark frame, byline preserved.
 
 ## Pending — pick up here
