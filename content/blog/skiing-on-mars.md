@@ -3,7 +3,7 @@ title = "Skiing on Mars"
 date = 2012-04-27T11:45:00+01:00
 slug = "skiing-on-mars"
 categories = ["robots", "space"]
-description = "A short hisotry of the Soviet PrOP-M Rovers."
+description = "A short history of the Soviet PrOP-M Rovers."
 disqus_identifier = "http://ZeroSharp.github.com/skiing-on-mars/"
 disqus_url        = "http://ZeroSharp.github.com/skiing-on-mars/"
 +++
@@ -15,7 +15,7 @@ This post is part of an ongoing series about robots, past and present.  See [Fri
 
 In May 1971, the USSR launched two rovers to explore Mars.  **They were to move on skis (!!)** while connected to the landers with 15m umbilical cables.
 
-The first one crash landed.  The second landed sucessfully but failed twenty seconds after landing and never moved.  The reasons are unknown although the landing took place in the middle of a dust storm.  The base module did manage to transmit about 20 seconds worth of the **first ever photograph of the surface of Mars**, shown on the left here.  According to the Soviet Academy of Sciences there is nothing, horizon or otherwise, identifiable in this photograph.
+The first one crash landed.  The second landed successfully but failed twenty seconds after landing and never moved.  The reasons are unknown although the landing took place in the middle of a dust storm.  The base module did manage to transmit about 20 seconds worth of the **first ever photograph of the surface of Mars**, shown on the left here.  According to the Soviet Academy of Sciences there is nothing, horizon or otherwise, identifiable in this photograph.
 
 [<img class="img-left" src="/images/blog/skiing-on-mars-001.png" alt="">
 ](http://en.wikipedia.org/wiki/File:Mars_3_Image.png)

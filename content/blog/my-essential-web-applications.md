@@ -6,7 +6,7 @@ categories = ["windows", "mac", "iphone"]
 disqus_identifier = "http://ZeroSharp.github.com/my-essential-web-applications/"
 disqus_url        = "http://ZeroSharp.github.com/my-essential-web-applications/"
 +++
-This is part three of a series of posts about the software and tools I find invaluable. See [Part 1: essential applications](/essential-applications) and [Part 2: Visual Studio tools](/my-essential-visual-studio-tools-and-extensions). In this post I'm covering the online applications and iPhone apps I find indispensible.
+This is part three of a series of posts about the software and tools I find invaluable. See [Part 1: essential applications](/essential-applications) and [Part 2: Visual Studio tools](/my-essential-visual-studio-tools-and-extensions). In this post I'm covering the online applications and iPhone apps I find indispensable.
 
 ## [Gmail](https://www.google.com/gmail/)
 
@@ -42,10 +42,10 @@ I've been using [Xero](https://www.xero.com/) for eight years now. Business acco
 
 ## [Kindle](https://www.amazon.com/kindle-dbs/fd/kcp)
 
-I like real books but don't always lug them about with me, so often I buy both the hard copy and the kindle version (there shoudl be some sort of clever discount for this...). The Kindle app is where I spend my time when I have no connectivity (the London tube, airplanes, etc.)
+I like real books but don't always lug them about with me, so often I buy both the hard copy and the kindle version (there should be some sort of clever discount for this...). The Kindle app is where I spend my time when I have no connectivity (the London tube, airplanes, etc.)
 
 ## [Chess.com](https://chess.com) and [Lichess.com](https://lichess.com)
 
 I waste hours playing online blitz chess. I've even written a couple of Chrome extensions: [Pretty print your games](https://chrome.google.com/webstore/detail/lichess-print-friendly-pd/goijhimgdjppmhmjkaglhggoapkgobfg) and [Analyse any chess.com game with lichess](https://chrome.google.com/webstore/detail/chesscom-v3-analysis/bhjlkimpkkgkmfjlcfngmakenalgleap).
 
-Chess is a mascohistic, character-building pastime. Progress is elusive. You play a couple of good games and you think you're improving and then you get thrashed repeatedly by a 10 year old. 
+Chess is a masochistic, character-building pastime. Progress is elusive. You play a couple of good games and you think you're improving and then you get thrashed repeatedly by a 10 year old. 
