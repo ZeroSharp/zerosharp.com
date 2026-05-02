@@ -1,40 +1,83 @@
 {{ define "main" }}
-<header>
-  <p class="post-eyebrow">{{ if eq .Section "blog" }}Blog{{ else }}{{ .Section | humanize }}{{ end }}</p>
-  <h1 class="post-title">{{ .Title }}</h1>
-</header>
-
-<div class="entry-content">
-  {{ .Content }}
-
-  <ul class="post-list" style="list-style:none; padding:0; margin:2rem 0 0;">
-    {{ $paginator := .Paginate (where .Pages "Section" "blog") }}
-    {{ range $paginator.Pages }}
-      <li style="padding: 1.25rem 0; border-bottom: 1px solid var(--zs-rule);">
-        <h2 style="margin: 0 0 0.35rem; font-size: 1.5rem; font-family: var(--zs-font-display);">
-          <a href="{{ .RelPermalink }}" style="color: var(--zs-purple); text-decoration: none;">{{ .Title }}</a>
-        </h2>
-        <p class="zs-meta" style="margin: 0;">
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
-          {{ with .Params.categories }}
-            · <span class="post-categories" style="display:inline-flex; gap:0.4rem; flex-wrap:wrap;">
-              {{ range . }}<a class="cat-chip" href="{{ printf "/blog/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a>{{ end }}
-            </span>
-          {{ end }}
-        </p>
-      </li>
-    {{ end }}
-  </ul>
-
-  {{ if gt $paginator.TotalPages 1 }}
-    <nav style="display:flex; justify-content:space-between; gap:1rem; margin-top:2rem;">
-      {{ if $paginator.HasPrev }}
-        <a href="{{ $paginator.Prev.URL }}" class="nav-prev">← Newer</a>
-      {{ else }}<span></span>{{ end }}
-      {{ if $paginator.HasNext }}
-        <a href="{{ $paginator.Next.URL }}" class="nav-next">Older →</a>
+{{ if eq .Kind "taxonomy" }}
+  {{- /* All-categories or all-tags index page */ -}}
+  <header>
+    <p class="post-eyebrow">Blog</p>
+    <h1 class="post-title">All {{ .Title | lower }}</h1>
+  </header>
+  <div class="entry-content">
+    {{ .Content }}
+    <ul class="taxonomy-index">
+      {{ range .Pages.ByTitle }}
+        <li>
+          <a class="cat-chip" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <span class="zs-meta taxonomy-count">{{ len .Pages }}</span>
+        </li>
       {{ end }}
-    </nav>
-  {{ end }}
-</div>
+    </ul>
+  </div>
+
+{{ else if eq .Kind "term" }}
+  {{- /* A specific term page (e.g. /blog/categories/mathematics/) */ -}}
+  <header>
+    <p class="post-eyebrow">{{ .Type | humanize }}</p>
+    <h1 class="post-title">{{ .Title }}</h1>
+    <p class="taxonomy-back">
+      <a href="{{ printf "/blog/%s/" .Type | relURL }}" class="zs-link">← All {{ .Type }}</a>
+    </p>
+  </header>
+  <div class="entry-content">
+    {{ .Content }}
+    <ul class="post-list" style="list-style:none; padding:0; margin:2rem 0 0;">
+      {{ range .Pages.ByDate.Reverse }}
+        <li style="padding: 1.25rem 0; border-bottom: 1px solid var(--zs-rule);">
+          <h2 style="margin: 0 0 0.35rem; font-size: 1.5rem; font-family: var(--zs-font-display);">
+            <a href="{{ .RelPermalink }}" style="color: var(--zs-purple); text-decoration: none;">{{ .Title }}</a>
+          </h2>
+          <p class="zs-meta" style="margin: 0;">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+          </p>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+
+{{ else }}
+  {{- /* Generic section list (taxonomy fallback for non-blog sections) */ -}}
+  <header>
+    <p class="post-eyebrow">{{ if eq .Section "blog" }}Blog{{ else }}{{ .Section | humanize }}{{ end }}</p>
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+  <div class="entry-content">
+    {{ .Content }}
+    <ul class="post-list" style="list-style:none; padding:0; margin:2rem 0 0;">
+      {{ $paginator := .Paginate (where .Pages "Section" "blog") }}
+      {{ range $paginator.Pages }}
+        <li style="padding: 1.25rem 0; border-bottom: 1px solid var(--zs-rule);">
+          <h2 style="margin: 0 0 0.35rem; font-size: 1.5rem; font-family: var(--zs-font-display);">
+            <a href="{{ .RelPermalink }}" style="color: var(--zs-purple); text-decoration: none;">{{ .Title }}</a>
+          </h2>
+          <p class="zs-meta" style="margin: 0;">
+            <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+            {{ with .Params.categories }}
+              · <span class="post-categories" style="display:inline-flex; gap:0.4rem; flex-wrap:wrap;">
+                {{ range . }}<a class="cat-chip" href="{{ printf "/blog/categories/%s/" (. | urlize) | relURL }}">{{ . }}</a>{{ end }}
+              </span>
+            {{ end }}
+          </p>
+        </li>
+      {{ end }}
+    </ul>
+    {{ if gt $paginator.TotalPages 1 }}
+      <nav style="display:flex; justify-content:space-between; gap:1rem; margin-top:2rem;">
+        {{ if $paginator.HasPrev }}
+          <a href="{{ $paginator.Prev.URL }}" class="nav-prev">← Newer</a>
+        {{ else }}<span></span>{{ end }}
+        {{ if $paginator.HasNext }}
+          <a href="{{ $paginator.Next.URL }}" class="nav-next">Older →</a>
+        {{ end }}
+      </nav>
+    {{ end }}
+  </div>
+{{ end }}
 {{ end }}
