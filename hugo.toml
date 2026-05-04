@@ -19,7 +19,7 @@ copyright = "Copyright © 2012–{year} Robert Anderson"
 # 'slug' front-matter field.)
 
 [params]
-  description = "Robert Anderson on programming, C#, .NET, DevExpress, and technology in general"
+  description = "Robert Anderson on programming, C#, .NET, DevExpress XAF and technology in general."
   author      = "Robert Anderson"
   brand_yellow = "#ffbf00"
   brand_purple = "#3D0F4D"

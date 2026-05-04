@@ -1,18 +1,16 @@
 {{/*
-  Prev / next navigation. Hugo's .PrevInSection / .NextInSection are
-  ordered by date ascending by default, so .NextInSection is the older
-  post and .PrevInSection is the newer one. We label them by chronology
-  ("Previous post" = older, "Next post" = newer) for reader clarity.
+  Prev / next navigation, labelled by chronology:
+  "Previous" = older post, "Next" = newer post.
 */}}
-{{ if or .NextInSection .PrevInSection }}
+{{ if or .PrevInSection .NextInSection }}
 <nav class="post-nav" aria-label="Post navigation">
-  {{ with .NextInSection }}
+  {{ with .PrevInSection }}
     <a class="nav-prev" href="{{ .RelPermalink }}">
       <span class="nav-label">← Previous</span>
       <span class="nav-title">{{ .Title }}</span>
     </a>
   {{ end }}
-  {{ with .PrevInSection }}
+  {{ with .NextInSection }}
     <a class="nav-next" href="{{ .RelPermalink }}">
       <span class="nav-label">Next →</span>
       <span class="nav-title">{{ .Title }}</span>

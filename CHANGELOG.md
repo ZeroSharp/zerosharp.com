@@ -77,6 +77,13 @@ Once a URL is chosen, port the content into `content/<path>/_index.md` (or `cont
 
 `blog.zerosharp.com/blog/categories/<cat>/` was the Octopress URL for category pages. Hugo emits them at `blog.zerosharp.com/blog/categories/<cat>/` too — *should* already work. Spot-check a couple of category URLs from the Wayback Machine and confirm they 200, otherwise add `_redirects` rules.
 
+**RSS feed path:** Octopress published the feed at `/atom.xml`; Hugo emits it at `/index.xml` and `/blog/index.xml`. Existing subscribers' feed readers point at the old path. Add to `static/_redirects` (or `_redirects` at site root, depending on Cloudflare Pages config):
+
+```
+/atom.xml       /blog/index.xml  301
+/blog/atom.xml  /blog/index.xml  301
+```
+
 ### Optional: Mercurial → Git for the Website
 
 Use `hg-fast-export` to bring `C:\Projects\ZeroSharp\Website` history into a git repo for archival. Not gating — the Website content is already ported into this repo (landing + about); we just don't have its commit history.
