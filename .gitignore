@@ -13,3 +13,6 @@ Thumbs.db
 # Local-only design references and notes
 /_local/
 *.mhtml
+
+# Claude-tooling guidance for local sessions; not project documentation
+CLAUDE.md
