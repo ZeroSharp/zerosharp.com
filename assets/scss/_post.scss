@@ -60,7 +60,12 @@
   flex-wrap: wrap;
 }
 
-.cat-chip {
+// Compound selectors so the no-underline rule wins against
+// `.entry-content a` (in the All-posts listing) and `.post-meta a:hover`
+// (on individual posts), both of which would otherwise underline chips.
+.cat-chip,
+.entry-content a.cat-chip,
+.post-meta a.cat-chip {
   font-family: var(--zs-font-body);
   font-weight: 700;
   font-size: 0.8rem;
@@ -71,7 +76,11 @@
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
 
-  &:hover { background: var(--zs-yellow); color: var(--zs-purple); }
+  &:hover {
+    background: var(--zs-yellow);
+    color: var(--zs-purple);
+    text-decoration: none;
+  }
 }
 
 // Article body — light weight (Thin) at 1.125rem, body line-height 1.7.
@@ -183,6 +192,12 @@
 
   .nav-prev { text-align: left;  }
   .nav-next { text-align: right; }
+}
+
+.more-posts {
+  text-align: center;
+  margin: 2rem 0 0;
+  font-size: 0.95rem;
 }
 
 .comments-section {

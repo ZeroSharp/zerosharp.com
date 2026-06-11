@@ -1,10 +1,17 @@
+{{/* "Blog" nav goes to the most recent post; the /blog/ archive
+     is reached via the "More posts" link at the foot of any post. */}}
+{{ $blogHref := "/blog/" | relURL }}
+{{ with index (where site.RegularPages "Section" "blog").ByDate.Reverse 0 }}
+  {{ $blogHref = .RelPermalink }}
+{{ end }}
 <header class="zs-site-header">
   <a class="zs-wordmark" href="{{ "/" | relURL }}">{{ site.Title }}</a>
   <nav>
     <ul class="zs-nav">
       <li><a href="{{ "/" | relURL }}"{{ if .IsHome }} class="is-active"{{ end }}>Home</a></li>
       <li><a href="{{ "/about/" | relURL }}"{{ if eq .Section "about" }} class="is-active"{{ end }}>About</a></li>
-      <li><a href="{{ "/blog/" | relURL }}"{{ if or (eq .Section "blog") (eq .Type "blog") }} class="is-active"{{ end }}>Blog</a></li>
+      <li><a href="{{ $blogHref }}"{{ if and (eq .Kind "page") (eq .Section "blog") }} class="is-active"{{ end }}>Blog</a></li>
+      <li><a href="{{ "/blog/" | relURL }}"{{ if and (ne .Kind "page") (hasPrefix .RelPermalink "/blog/") }} class="is-active"{{ end }}>Archives</a></li>
       <li><a href="https://github.com/zerosharp">GitHub</a></li>
     </ul>
   </nav>

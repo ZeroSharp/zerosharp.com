@@ -22,8 +22,9 @@ copyright = "Copyright © 2012–{year} Robert Anderson"
   description = "Robert Anderson on programming, C#, .NET, DevExpress XAF and technology in general."
   author      = "Robert Anderson"
   brand_yellow = "#ffbf00"
-  brand_purple = "#3D0F4D"
-  brand_lavender = "#B45AD3"
+  brand_navy = "#023047"
+  brand_teal = "#219EBC"
+  brand_orange = "#FB8500"
 
 [params.disqus]
   shortname = "zerosharp"

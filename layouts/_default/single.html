@@ -17,6 +17,9 @@
     {{ partial "post-byline.html" . }}
     {{ partial "post-nav.html" . }}
     {{ if eq .Section "blog" }}
+      <p class="more-posts">
+        <a class="zs-link" href="{{ "/blog/" | relURL }}">Archives</a>
+      </p>
       {{ partial "comments-disqus.html" . }}
     {{ end }}
   </footer>
