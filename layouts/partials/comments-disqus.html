@@ -1,11 +1,13 @@
 {{/*
-  Disqus thread. We pass disqus_identifier explicitly so threads from
-  the original Octopress permalinks stay attached after the migration.
-  Posts can override disqus_identifier in their front-matter.
+  Disqus thread. disqus_identifier is the immutable lookup key — we
+  pass the original Octopress identifier so historical comment threads
+  stay attached. disqus_url is the canonical page URL — we always use
+  the live .Permalink so it matches the current hostname (otherwise
+  Disqus's trusted-domain check rejects on the dead Octopress host).
 */}}
 {{ $shortname := site.Params.disqus.shortname }}
 {{ $identifier := .Params.disqus_identifier | default .RelPermalink }}
-{{ $url        := .Params.disqus_url        | default .Permalink }}
+{{ $url        := .Permalink }}
 {{ $title      := .Title }}
 
 {{ if $shortname }}
