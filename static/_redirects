@@ -1,0 +1,4 @@
+# Octopress published its feed at /atom.xml; Hugo emits at /blog/index.xml.
+# Keep old feed-reader subscribers working.
+/atom.xml       /blog/index.xml  301
+/blog/atom.xml  /blog/index.xml  301
