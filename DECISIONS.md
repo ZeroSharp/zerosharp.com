@@ -6,8 +6,8 @@ This document captures *why* the site was migrated from Octopress to Hugo, what 
 
 Three artifacts:
 
-1. **Landing page** at `C:\Projects\ZeroSharp\Website\` — hand-written static HTML/CSS in a Mercurial repo, hosted on Amazon S3 as `www.zerosharp.com`. Plus a `cv/` subsite intended for `cv.zerosharp.com`.
-2. **Blog** at `C:\Projects\github\octopress\` — Octopress (Jekyll 0.11, 2012-vintage), hosted on GitHub Pages as `blog.zerosharp.com`. ~95 posts, last touched in 2018.
+1. **Landing page** — hand-written static HTML/CSS in a Mercurial repo, hosted on Amazon S3 as `www.zerosharp.com`.
+2. **Blog** — Octopress (Jekyll 0.11, 2012-vintage), hosted on GitHub Pages as `blog.zerosharp.com`. ~95 posts, last touched in 2018.
 3. **Claude Design mockup** — defines the visual target with a clean modern HTML class structure (`zs-site-header`, `post-eyebrow`, `cat-chip`, `byline-avatar`, etc.) that does *not* match Octopress's legacy `hentry`/`entry-title` markup.
 
 ## Decision 1 — Migrate off Octopress
@@ -43,7 +43,7 @@ Why:
 - Two repos = two deploy stories = two sources of drift. For one post a month, the overhead is disproportionate.
 - The landing page repo is currently in **Mercurial** with no remote. Modern deploy hosts (Cloudflare Pages, Netlify, GitHub Pages) all auto-deploy from `git push`. We were going to migrate to Git anyway.
 
-Repo location: `C:\Projects\github\zerosharp\`. GitHub home: `ZeroSharp/zerosharp.com` (yet to be created — repo is local-only for now). The original `ZeroSharp/zerosharp.github.com` will be left as a frozen historical archive.
+GitHub home: [`ZeroSharp/zerosharp.com`](https://github.com/ZeroSharp/zerosharp.com). The original `ZeroSharp/zerosharp.github.com` will be left as a frozen historical archive.
 
 ## Decision 4 — Cloudflare Pages over GitHub Pages / Netlify / S3
 
@@ -82,17 +82,11 @@ We did not pick a Hugo theme. Layouts are hand-authored from the Claude Design m
 
 Total custom layout code: 8 templates + 6 SCSS partials. Maintainable.
 
-## Decision 8 — `/about/` is the bio; the rich CV stays unlinked
-
-`about.zerosharp.com` (or `/about/` on any host) hosts a short bio: name, role, current work, interests. This is the page intended for "about the author" links from posts.
-
-The rich CV (employment history, skills, references — currently at `Website/cv/index.html`) is **not** linked from the new site. It's intended to be hosted at a separate URL that's only shared deliberately when the user is presenting his CV to someone. Specific URL still TBD (see CHANGELOG → Pending).
-
-## Decision 9 — `/` is the landing hero; `/blog/` is the post-listing blurb
+## Decision 8 — `/` is the landing hero; `/blog/` is the post-listing blurb
 
 Initially `/` was the post-listing-with-blurb, but the user clarified they want the existing `Website/index.html` hero (giant "0#" mark on full-bleed yellow) to stay at `/`. The post-listing blurb moved to `/blog/` (so anyone who already had `blog.zerosharp.com/` bookmarked sees the blurb-style page, not just a "Blog" header).
 
-## Decision 10 — Octopress shortcodes rewritten in the migration script, not at runtime
+## Decision 9 — Octopress shortcodes rewritten in the migration script, not at runtime
 
 The migration script (`scripts/port-octopress-posts.py`) statically rewrites Octopress Liquid shortcodes (`{% codeblock %}`, `{% img %}`, `{% blockquote %}`, `{% pullquote %}`, `{% youtube %}`, `{% gist %}`, `{% imgcap %}`, `{% raw %}`, `{% highlight %}`) into Hugo equivalents (fenced code, raw HTML img tag, `>` markdown quote, Hugo `{{< youtube >}}` / `{{< gist >}}` / `{{< pullquote >}}` / `{{< highlight >}}` shortcodes) at port time.
 
@@ -102,7 +96,7 @@ Alternative was to write a Hugo shortcode for each Octopress tag and process the
 - Octopress's `{% codeblock %}` and `{% img %}` are the bulk of the volume and translate cleanly to standard Markdown — no shortcode needed at all.
 - Only 3 Octopress tags don't have a clean Markdown equivalent (`pullquote`, `gist`, `highlight`); those keep dedicated Hugo shortcodes.
 
-## Decision 11 — Hand-authored migration script, not a rewrite engine
+## Decision 10 — Hand-authored migration script, not a rewrite engine
 
 The script in `scripts/` is straightforward: one regex per shortcode, one Python file, ~250 lines. Could a more "principled" port use a Liquid AST library or a Hugo content adapter? Yes. But:
 
@@ -118,4 +112,4 @@ The script lives in the repo so we have a written record of the rewrites; there'
 - Site search.
 - Drafts/scheduled-publish workflow beyond what Hugo gives by default.
 - Migrating the Octopress `zerosharp.github.com` repo's commit history into the new repo. The historical posts are content-ported; the git history is not preserved (it stays at the original repo as an archive).
-- Migrating the Mercurial history of `Website/` into git. Optional later step using `hg-fast-export`; not gating.
+- Migrating the Mercurial history of the old landing-page repo into git. Optional later step using `hg-fast-export`; not gating.

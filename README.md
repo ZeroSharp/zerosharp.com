@@ -4,14 +4,15 @@ Source for **www.zerosharp.com**, **blog.zerosharp.com**, and **about.zerosharp.
 
 ## Local development
 
+From the repo root:
+
 ```powershell
-# from C:\Projects\github\zerosharp
 hugo server
 ```
 
 Then open http://localhost:1313/. Hugo rebuilds on file change with livereload.
 
-If `hugo` isn't on PATH, the binary is installed at `C:\ProgramData\chocolatey\bin\hugo.exe` (Hugo extended, v0.161+, needed for the SCSS pipeline). Open a fresh PowerShell — the chocolatey install put it on the Machine PATH.
+Hugo extended v0.161+ is required (needed for the SCSS pipeline). Install via your package manager: `choco install hugo-extended` (Windows), `brew install hugo` (macOS), or [download a release binary](https://github.com/gohugoio/hugo/releases).
 
 To produce a static build into `public/` without serving:
 
@@ -79,19 +80,14 @@ hugo new content blog/my-new-post.md
 
 The archetype gives you `draft = true`. To preview drafts in the local server use `hugo server -D`. Drop `draft` (or set to `false`) when ready to publish.
 
-## Hidden CV
-
-The richer CV that lives at `C:\Projects\ZeroSharp\Website\cv\` has **not** been ported yet. The intent is to host it at a URL that's not linked from anywhere on the site, given out by hand. Wire-up is pending — see CHANGELOG section *Pending* below.
-
 ## Hosting
 
 Not yet deployed. Plan: connect this repo to Cloudflare Pages with build command `hugo` and output `public/`. Custom domains:
 
 - `zerosharp.com` (apex) and `www.zerosharp.com` → both serve the landing page
 - `blog.zerosharp.com` → also serves the same site, where `/<slug>/` paths give the post pages
-- (future) `cv.zerosharp.com` or some private URL → for the rich CV once ported
 
-The same `public/` build is served at all three hostnames; URL paths handle the routing.
+The same `public/` build is served at all hostnames; URL paths handle the routing.
 
 ## Notes on conventions
 
