@@ -159,7 +159,7 @@ api keys:
 endpoints:
   GET - https://c1w0hct166.execute-api.eu-west-1.amazonaws.com/dev/hello
 functions:
-  serverless-php-dev-hello: arn:aws:lambda:eu-west-1:962613113552:function:serverless-php-dev-hello
+  serverless-php-dev-hello: arn:aws:lambda:eu-west-1:987654321000:function:serverless-php-dev-hello
 ```
 
 Run the remote function via Serverless.

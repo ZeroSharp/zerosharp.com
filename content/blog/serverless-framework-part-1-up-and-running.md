@@ -112,7 +112,7 @@ Serverless: Deploying functions in "dev" to the following regions: eu-west-1
 Serverless: ------------------------  
 Serverless: Successfully deployed functions in "dev" to the following regions:   
 Serverless: eu-west-1 ------------------------  
-Serverless:   nodejscomponent/potd/check: arn:aws:lambda:eu-west-1:962613113552:function:serverlessPotd-nodejscomponent-potd-check:dev  
+Serverless:   nodejscomponent/potd/check: arn:aws:lambda:eu-west-1:987654321000:function:serverlessPotd-nodejscomponent-potd-check:dev  
 
 Serverless: Deploying endpoints in "dev" to the following regions: eu-west-1  
 Serverless: Successfully deployed endpoints in "dev" to the following regions:  
