@@ -16,9 +16,9 @@
   <div id="disqus_thread"></div>
   <script>
     var disqus_config = function () {
-      this.page.identifier = {{ $identifier | jsonify }};
-      this.page.url        = {{ $url        | jsonify }};
-      this.page.title      = {{ $title      | jsonify }};
+      this.page.identifier = {{ $identifier }};
+      this.page.url        = {{ $url        }};
+      this.page.title      = {{ $title      }};
     };
     (function() {
       var d = document, s = d.createElement('script');
