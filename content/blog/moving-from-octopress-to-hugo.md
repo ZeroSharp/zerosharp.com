@@ -30,9 +30,16 @@ Everything felt rather fragile and looked haphazard. I asked Claude for recommen
 
 ## Porting the content
 
-The hard part of any migration is the content. Octopress posts are Markdown files with YAML front-matter and Liquid shortcodes embedded in the body — `{% codeblock %}`, `{% img right /p alt %}`, `{% blockquote author %}…{% endblockquote %}`, `{% youtube ID %}`, some Octopress-specific like the `{% pullquote %}` and `{% highlight TEXT %}` plugins.
+The hard part of any migration is the content. Octopress posts are Markdown files with YAML front-matter and Liquid shortcodes embedded in the body 
 
-Hugo doesn't speak Liquid. So Claude Code wrote a Python script that converted everything either translated to Hugo equivalents or rewrote to plain Markdown.
+- `{% codeblock %}`
+- `{% img right /p alt %}` 
+- `{% blockquote author %}…{% endblockquote %}`
+- `{% youtube ID %}`, 
+
+and some Octopress-specific like the `{% pullquote %}` and `{% highlight TEXT %}` plugins.
+
+Hugo doesn't speak Liquid. So Claude Code wrote a Python script that converted everything, either translated to Hugo equivalents or rewritten as plain Markdown.
 
 ## Blog resurrected
 
