@@ -10,6 +10,8 @@
 
   <link rel="icon" type="image/svg+xml" href="{{ "/favicon.svg" | relURL }}">
 
+  <link rel="canonical" href="{{ .Permalink }}">
+
   {{ $css := resources.Get "scss/main.scss" | toCSS (dict "outputStyle" "compressed") | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>

@@ -2,3 +2,8 @@
 # Keep old feed-reader subscribers working.
 /atom.xml       /blog/index.xml  301
 /blog/atom.xml  /blog/index.xml  301
+
+# Octopress emitted an archive page at /blog/archives/. Hugo's equivalent
+# is the /blog/ listing. This 301 lets Google collapse the phantom URL.
+/blog/archives/ /blog/           301
+/blog/archives  /blog/           301

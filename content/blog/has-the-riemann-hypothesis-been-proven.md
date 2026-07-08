@@ -2,6 +2,7 @@
 title = "Has the Riemann Hypothesis been proven?"
 date = 2018-09-23T08:35:00+01:00
 slug = "has-the-riemann-hypothesis-been-proven"
+aliases = ["/has-the-riemann-hypothesis-been-proved/"]
 categories = ["mathematics"]
 disqus_identifier = "http://ZeroSharp.github.com/has-the-riemann-hypothesis-been-proved/"
 disqus_url        = "http://ZeroSharp.github.com/has-the-riemann-hypothesis-been-proved/"
