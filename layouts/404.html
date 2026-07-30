@@ -1,0 +1,18 @@
+{{ define "title" }}404 — {{ site.Title }}{{ end }}
+
+{{ define "main" }}
+<header>
+  <p class="post-eyebrow">Error</p>
+  <h1 class="post-title">404 — Page not found</h1>
+</header>
+
+<div class="entry-content">
+  <p>The page you asked for isn't here. It may have been moved, or it may never have existed.</p>
+  <p>Try one of these:</p>
+  <ul>
+    <li><a href="{{ "/" | relURL }}">Home</a></li>
+    <li><a href="{{ "/blog/" | relURL }}">Blog archive</a></li>
+    <li><a href="{{ "/about/" | relURL }}">About</a></li>
+  </ul>
+</div>
+{{ end }}
