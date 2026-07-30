@@ -15,6 +15,8 @@ I'm a [DevExpress](https://www.devexpress.com/Home/Community/mvp.xml) MVP.
 
 In 2019 I completed an MSc in Cognition and Computation at Birkbeck, University of London. I developed a neural network in Python to solve a widely-used test of visual analogical reasoning. My research thesis is here: [A Relational Priming Approach to Solving Raven's Progressive Matrices](https://github.com/shamp00/masters-cognition-and-computation-dissertation).
 
-I have won prizes at multiple hackathons in both Buenos Aires and London.
+I was on [University Challenge](https://www.imdb.com/name/nm11457537/).
+
+I have won prizes at multiple hackathons in both [Buenos Aires](/how-i-went-from-c-number-developer-to-iphone-developer-in-a-weekend/) and London.
 
 I also like robots, mathematics, chess, old movies, Rubik's cubes, classical guitar, skiing, running, learning Portuguese...

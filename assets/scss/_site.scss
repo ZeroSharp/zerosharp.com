@@ -83,4 +83,11 @@ body.is-landing { background: var(--zs-yellow); }
 
   p { margin: 0; opacity: 0.9; }
   a { color: var(--zs-white); text-decoration: underline; }
+
+  .zs-footer-note {
+    margin-top: 0.5rem;
+    font-size: 0.8125rem;
+    color: var(--zs-navy);
+    opacity: 1;
+  }
 }
