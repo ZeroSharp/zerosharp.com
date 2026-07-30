@@ -89,6 +89,15 @@ figure.code .highlight .line-numbers span { color: #586e75 !important; }
 
 figure.code .highlight .line { display: block; }
 
+// Blocks that opt out of line numbers (```lang {linenos=false}) wrap instead
+// of scrolling. Chroma puts line-numbered code inside .chroma > table, so the
+// direct-child selector only matches the no-gutter case — where wrapping
+// can't push the code out of step with the numbers.
+.entry-content .highlight > pre.chroma code {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
 // Solarized-Dark Pygments token colours.
 .highlight {
   .c, .cm, .cp, .c1 { color: #586e75; font-style: italic; }

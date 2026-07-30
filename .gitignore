@@ -12,7 +12,11 @@ Thumbs.db
 
 # Local-only design references and notes
 /_local/
+/raw/
 *.mhtml
 
 # Claude-tooling guidance for local sessions; not project documentation
 CLAUDE.md
+
+# Playwright MCP scratch output (screenshots, traces)
+/.playwright-mcp/
