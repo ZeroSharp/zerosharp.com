@@ -28,7 +28,7 @@ A very pretty MarkDown editor for Mac and iPhone. I use [Bear](https://bear.app/
 
 Since I use [GSuite](https://gsuite.google.com/), it makes sense to try to put everything there. Google Drive has improved enormously since they moved to a file streaming approach. 
 
-## [Google Tasks](https://mail.google.com/tasks/canvas) (and the [GoTasks](gotasksapp.com/) app)
+## [Google Tasks](https://mail.google.com/tasks/canvas) (and the [GoTasks](http://gotasksapp.com/) app)
 
 I need simple task manager with support for multiple lists, hierarchies and available everywhere. Google Tasks is often overlooked in this regard. Check out the [Google Tasks canvas](https://mail.google.com/tasks/canvas). There is also a fantastic free iPhone app for it [GoTasks](http://gotasksapp.com/).
 

@@ -2,7 +2,7 @@
 title = "The only robot on any other planet"
 date = 2012-05-30T08:44:00+01:00
 slug = "the-only-robot-on-any-other-planet"
-categories = ["robots", "space", "C"]
+categories = ["robots", "space"]
 description = "A mention of the hardware and software on board the Mars Opportunity Rover."
 disqus_identifier = "http://ZeroSharp.github.com/the-only-robot-on-any-other-planet/"
 disqus_url        = "http://ZeroSharp.github.com/the-only-robot-on-any-other-planet/"

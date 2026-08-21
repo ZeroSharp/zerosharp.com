@@ -6,7 +6,7 @@ categories = ["windows", "mac"]
 disqus_identifier = "http://ZeroSharp.github.com/essential-applications/"
 disqus_url        = "http://ZeroSharp.github.com/essential-applications/"
 +++
-This is the first in a series of posts where I list the applications that I use and enjoy the most. See [part 2]((/my-essential-visual-studio-tools-and-extensions)) and [part 3](/my-essential-web-applications).
+This is the first in a series of posts where I list the applications that I use and enjoy the most. See [part 2](/my-essential-visual-studio-tools-and-extensions) and [part 3](/my-essential-web-applications).
 
 A bit of preamble, my most powerful machine is a Windows-only desktop with lots of RAM and an SSD drive. I use it almost exclusively for development. 
 
