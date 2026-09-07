@@ -9,8 +9,6 @@ I'm Robert Anderson.  I'm a software developer based in Lisbon (via London, Pari
 
 I am the founder and director of [ZeroSharp](http://www.zerosharp.com/) providing software engineering and consultancy services. 
 
-I am the principal software engineer of the [Ripple Netting](https://treasury.ripple.com/solutions/netting/netting) a corporate treasury solution for optimising intercompany payments. It was formerly known as GTreasury Netting and before that as Coprocess Netting.
-
 I'm a [DevExpress](https://www.devexpress.com/Home/Community/mvp.xml) MVP.
 
 In 2019 I completed an MSc in Cognition and Computation at Birkbeck, University of London. I developed a neural network in Python to solve a widely-used test of visual analogical reasoning. My research thesis is here: [A Relational Priming Approach to Solving Raven's Progressive Matrices](https://github.com/shamp00/masters-cognition-and-computation-dissertation).
